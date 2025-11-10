@@ -13,7 +13,7 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
 spec:
   type: template
-  owner: platform-team
+  owner: group:default/platform-team
   lifecycle: production
   subcomponentOf: hexagonal-architecture-templates
 ---
@@ -31,7 +31,7 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
 spec:
   type: library
-  owner: platform-team
+  owner: group:default/platform-team
   lifecycle: production
   subcomponentOf: springboot-service-template
 ---
@@ -51,7 +51,7 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
 spec:
   type: library
-  owner: platform-team
+  owner: group:default/platform-team
   lifecycle: production
   subcomponentOf: springboot-service-template
 ---
@@ -71,7 +71,7 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
 spec:
   type: library
-  owner: platform-team
+  owner: group:default/platform-team
   lifecycle: production
   subcomponentOf: springboot-service-template
 ---
@@ -91,7 +91,7 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
 spec:
   type: template
-  owner: platform-team
+  owner: group:default/platform-team
   lifecycle: production
   subcomponentOf: hexagonal-architecture-templates
 ---
@@ -110,7 +110,7 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
 spec:
   type: library
-  owner: platform-team
+  owner: group:default/platform-team
   lifecycle: production
   subcomponentOf: webflux-service-template
 ---
@@ -131,7 +131,7 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
 spec:
   type: library
-  owner: platform-team
+  owner: group:default/platform-team
   lifecycle: production
   subcomponentOf: webflux-service-template
 ---
@@ -153,6 +153,6 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
 spec:
   type: library
-  owner: platform-team
+  owner: group:default/platform-team
   lifecycle: production
   subcomponentOf: webflux-service-template
