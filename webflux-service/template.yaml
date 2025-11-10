@@ -23,9 +23,10 @@ spec:
           title: Nombre del Componente
           type: string
           description: Identificador único del componente (ej. user-service)
-          pattern: '^[a-z0-9-]+$'
+          pattern: '^[a-z0-9]([a-z0-9-]*[a-z0-9])?$'
+          maxLength: 63
           ui:autofocus: true
-          ui:help: 'Usar kebab-case: minúsculas y guiones'
+          ui:help: 'Usar kebab-case: minúsculas, números y guiones. Máximo 63 caracteres. No puede empezar o terminar con guión.'
         description:
           title: Descripción
           type: string
