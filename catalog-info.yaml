@@ -21,5 +21,5 @@ metadata:
     backstage.io/techdocs-ref: url:https://github.com/addon-ai/backstage-templates/tree/main
 spec:
   type: template-collection
-  owner: platform-team
+  owner: group:default/platform-team
   lifecycle: production
