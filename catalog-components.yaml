@@ -1,40 +1,5 @@
 ---
 apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: platform-team
-  description: Platform engineering team responsible for developer tools and templates
-spec:
-  type: team
-  children: []
----
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: hexagonal-architecture-templates
-  description: |
-    Spring Boot service templates with Hexagonal Architecture (Ports and Adapters).
-    Includes both traditional Spring Boot and reactive WebFlux implementations.
-  tags:
-    - backstage
-    - templates
-    - java
-    - spring-boot
-    - webflux
-    - hexagonal-architecture
-    - microservices
-  links:
-    - title: Documentation
-      url: https://github.com/addon-ai/backstage-templates/blob/main/README.md
-  annotations:
-    github.com/project-slug: addon-ai/backstage-templates
-    backstage.io/techdocs-ref: url:https://github.com/addon-ai/backstage-templates/tree/main
-spec:
-  type: template-collection
-  owner: group:default/platform-team
-  lifecycle: production
----
-apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: springboot-service-template
@@ -48,9 +13,9 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
 spec:
   type: template
-  owner: group:default/platform-team
+  owner: platform-team
   lifecycle: production
-  subcomponentOf: component:default/hexagonal-architecture-templates
+  subcomponentOf: hexagonal-architecture-templates
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -66,9 +31,9 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
 spec:
   type: library
-  owner: group:default/platform-team
+  owner: platform-team
   lifecycle: production
-  subcomponentOf: component:default/springboot-service-template
+  subcomponentOf: springboot-service-template
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -86,9 +51,9 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
 spec:
   type: library
-  owner: group:default/platform-team
+  owner: platform-team
   lifecycle: production
-  subcomponentOf: component:default/springboot-service-template
+  subcomponentOf: springboot-service-template
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -106,9 +71,9 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
 spec:
   type: library
-  owner: group:default/platform-team
+  owner: platform-team
   lifecycle: production
-  subcomponentOf: component:default/springboot-service-template
+  subcomponentOf: springboot-service-template
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -126,9 +91,9 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
 spec:
   type: template
-  owner: group:default/platform-team
+  owner: platform-team
   lifecycle: production
-  subcomponentOf: component:default/hexagonal-architecture-templates
+  subcomponentOf: hexagonal-architecture-templates
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -145,9 +110,9 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
 spec:
   type: library
-  owner: group:default/platform-team
+  owner: platform-team
   lifecycle: production
-  subcomponentOf: component:default/webflux-service-template
+  subcomponentOf: webflux-service-template
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -166,9 +131,9 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
 spec:
   type: library
-  owner: group:default/platform-team
+  owner: platform-team
   lifecycle: production
-  subcomponentOf: component:default/webflux-service-template
+  subcomponentOf: webflux-service-template
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -188,6 +153,6 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
 spec:
   type: library
-  owner: group:default/platform-team
+  owner: platform-team
   lifecycle: production
-  subcomponentOf: component:default/webflux-service-template
+  subcomponentOf: webflux-service-template
