@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: webflux-domain-layer
+  description: Domain layer - Business logic and entities for WebFlux reactive template
+  tags:
+    - domain
+    - business-logic
+    - entities
+    - hexagonal-architecture
+    - reactive
+  annotations:
+    github.com/project-slug: addon-ai/backstage-templates
+spec:
+  type: library
+  owner: platform-team
+  lifecycle: production
+  subcomponentOf: webflux-service-template

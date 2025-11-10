@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: springboot-domain-layer
+  description: Domain layer - Business logic and entities for Spring Boot template
+  tags:
+    - domain
+    - business-logic
+    - entities
+    - hexagonal-architecture
+  annotations:
+    github.com/project-slug: addon-ai/backstage-templates
+spec:
+  type: library
+  owner: platform-team
+  lifecycle: production
+  subcomponentOf: springboot-service-template

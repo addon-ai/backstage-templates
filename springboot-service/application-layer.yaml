@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: springboot-application-layer
+  description: Application layer - Use cases, DTOs, mappers and services for Spring Boot template
+  tags:
+    - application
+    - use-cases
+    - services
+    - dto
+    - mappers
+    - hexagonal-architecture
+  annotations:
+    github.com/project-slug: addon-ai/backstage-templates
+spec:
+  type: library
+  owner: platform-team
+  lifecycle: production
+  subcomponentOf: springboot-service-template
