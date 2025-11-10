@@ -1,123 +1,206 @@
-# Backstage Templates - Hexagonal Architecture
+# Hexagonal Architecture Templates
 
-Colección de templates de Backstage para crear microservicios Java con Arquitectura Hexagonal (Ports and Adapters).
+Welcome to the Hexagonal Architecture Templates documentation.
 
-## 📋 Templates Disponibles
+## Overview
 
-### 1. Spring Boot Service Template
-- **Nombre:** `springboot-service-template`
-- **Descripción:** Microservicio Java tradicional con Spring Boot
-- **Arquitectura:** Hexagonal (Ports and Adapters)
-- **Tecnologías:** Java, Spring Boot, Maven
+This repository provides Backstage Software Templates for creating Spring Boot microservices following Hexagonal Architecture principles (Ports and Adapters pattern).
 
-### 2. WebFlux Reactive Service Template
-- **Nombre:** `back-ms-movies-webflux-template`
-- **Descripción:** Microservicio reactivo para gestión de películas con Spring WebFlux
-- **Arquitectura:** Hexagonal (Ports and Adapters)
-- **Tecnologías:** Java, Spring WebFlux, R2DBC, Maven
+## Available Templates
 
-## 🏗️ Arquitectura Hexagonal
+### back-ms-users
+**Type**: springBoot  
+**Description**: Microservice for users management
 
-Los templates implementan el patrón de Arquitectura Hexagonal con las siguientes capas:
+### back-ms-movies
+**Type**: springBoot  
+**Description**: Microservice for movie rental management
 
-- **Domain Layer:** Lógica de negocio y entidades
-- **Application Layer:** Casos de uso y puertos
-- **Infrastructure Layer:** Adaptadores y configuraciones
+### back-ms-users-webflux
+**Type**: springWebflux  
+**Description**: Reactive microservice for users management with Spring WebFlux
 
-## ⚙️ Características
+### back-ms-movies-webflux
+**Type**: springWebflux  
+**Description**: Reactive microservice for movie rental management with Spring WebFlux
 
-### Spring Boot Service
-- Java 17/21
-- Spring Boot
-- Maven como build tool
-- Configuración básica de microservicio
 
-### WebFlux Reactive Service
-- **Java:** 17/21
-- **Spring Boot:** 3.2.5/3.3.0
-- **Base de Datos:** PostgreSQL, MySQL, H2
-- **Migraciones:** Liquibase
-- **Documentación:** Swagger/OpenAPI
-- **Monitoreo:** Spring Actuator
-- **Seguridad:** Spring Security (opcional)
-- **CI/CD:** GitHub Actions
-- **Containerización:** Docker y docker-compose
-- **Cobertura de código:** Configurable (default: 85%)
+## Technology Stack
 
-## 🚀 Uso
+### Core Dependencies
 
-1. Accede a Backstage
-2. Ve a "Create Component"
-3. Selecciona uno de los templates disponibles
-4. Completa los parámetros requeridos:
-   - **Component ID:** Identificador único (kebab-case)
-   - **Owner:** Equipo propietario
-   - **Repository URL:** URL del repositorio GitHub
-   - **Configuración Java:** Group ID, versiones, etc.
+| Dependency | Version |
+|------------|---------|
+| Java | 21 |
+| Spring Boot | 3.2.5 |
+| MapStruct | 1.5.5.Final |
+| Lombok | 1.18.30 |
+| Springdoc OpenAPI | 2.1.0 |
 
-## 📁 Estructura del Repositorio
+### Database
 
+| Component | Version |
+|-----------|---------|
+| PostgreSQL | 42.7.3 |
+| Flyway | 10.10.0 |
+| H2 (Testing) | 2.2.224 |
+
+### Build Tools
+
+| Tool | Version |
+|------|---------|
+| Maven Compiler | 3.11.0 |
+| Maven Surefire | 3.2.5 |
+| Jacoco | 0.8.11 |
+
+### Additional Libraries
+
+- **Lombok-MapStruct Binding**: 0.2.0
+- **Maven Wrapper**: 3.3.3
+
+## Architecture
+
+All templates follow the Hexagonal Architecture pattern with three main layers:
+
+### Domain Layer
+- **Purpose**: Core business logic and entities
+- **Dependencies**: None (pure domain)
+- **Components**: Domain models, business rules, domain exceptions
+
+### Application Layer
+- **Purpose**: Use cases and application services
+- **Dependencies**: Domain layer only
+- **Components**: 
+  - Input Ports (use case interfaces)
+  - Output Ports (repository interfaces)
+  - DTOs (Data Transfer Objects)
+  - MapStruct mappers
+
+### Infrastructure Layer
+- **Purpose**: External adapters and technical implementations
+- **Dependencies**: Application and Domain layers
+- **Components**:
+  - REST Controllers (input adapters)
+  - JPA/R2DBC Repositories (output adapters)
+  - Database entities
+  - Configuration classes
+
+## Features
+
+### Code Quality
+- **Test Coverage**: Minimum 85% enforced by Jacoco
+- **Code Generation**: MapStruct for type-safe mappings
+- **Boilerplate Reduction**: Lombok annotations
+
+### Database
+- **SGBD**: PostgreSQL 15.0
+- **Migration Tool**: Flyway
+- **Connection Pooling**: HikariCP (Spring Boot default)
+- **Testing**: H2 in-memory database
+
+### API Documentation
+- **Tool**: Springdoc OpenAPI 2.1.0
+- **Format**: OpenAPI 3.0
+- **UI**: Swagger UI included
+
+### DevOps
+- **CI/CD**: GitHub Actions workflows included
+- **Containerization**: Docker and docker-compose
+- **Java Distribution**: temurin
+- **Maven Options**: -Xmx1024m
+
+## Getting Started
+
+### Prerequisites
+- Java 21
+- Maven 3.3.3
+- Docker (optional, for local development)
+
+### Using Templates
+
+1. **Access Backstage UI**
+   - Navigate to your Backstage instance
+   - Go to "Create" section
+
+2. **Select Template**
+   - Choose from available templates
+   - Review template description
+
+3. **Configure Parameters**
+   - Component ID (service name)
+   - Group ID (Maven group)
+   - Owner (team/user)
+   - Additional options
+
+4. **Create Service**
+   - Click "Create"
+   - Wait for scaffolding to complete
+   - Access your new repository
+
+### Local Development
+
+```bash
+# Clone repository
+git clone <repository-url>
+
+# Run with Maven
+mvn spring-boot:run
+
+# Run with Docker Compose
+docker-compose up
+
+# Run tests
+mvn test
+
+# Check coverage
+mvn verify
 ```
-backstage-templates/
-├── catalog-info.yaml              # Registro del template collection
-├── springboot-service/
-│   ├── template.yaml             # Definición del template Spring Boot
-│   └── skeleton/                 # Código base del template
-│       ├── src/
-│       ├── pom.xml
-│       ├── catalog-info.yaml
-│       └── ...
-└── webflux-service/
-    ├── template.yaml             # Definición del template WebFlux
-    └── skeleton/                 # Código base del template
-        ├── src/
-        ├── pom.xml
-        ├── catalog-info.yaml
-        ├── docker-compose.yml
-        └── ...
-```
 
-## 🔧 Configuración
+## Configuration
 
-### Parámetros del Template WebFlux
+### Environment Profiles
 
-#### Información del Componente
-- `component_id`: Identificador único (máx. 63 caracteres, kebab-case)
-- `description`: Descripción del servicio
-- `owner`: Equipo propietario
-- `system`: Sistema al que pertenece
-- `lifecycle`: experimental | production | deprecated
+All templates include multiple environment profiles:
 
-#### Configuración Java
-- `groupId`: Group ID de Maven
-- `artifactId`: Artifact ID de Maven
-- `javaVersion`: 17 | 21
-- `springBootVersion`: 3.2.5 | 3.3.0
+- `local` - Local development
+- `develop` - Development environment
+- `test` - Testing environment
+- `staging` - Staging environment
+- `prod` - Production environment
 
-#### Base de Datos
-- `database`: PostgreSQL | MySQL | H2
-- `enableLiquibase`: Habilitar migraciones
+### Database Configuration
 
-#### Características Adicionales
-- `enableSwagger`: Documentación API
-- `enableActuator`: Endpoints de monitoreo
-- `enableSecurity`: Autenticación y autorización
-- `coverageThreshold`: Umbral de cobertura (0-100%)
+Default PostgreSQL configuration:
+- **Port**: 5432
+- **Database**: `<service-name>_db`
+- **User**: postgres
+- **Migrations**: Flyway scripts in `src/main/resources/db/migration/`
 
-#### CI/CD y DevOps
-- `enableGithubActions`: Pipeline CI/CD
-- `enableDocker`: Containerización
-- `environments`: Ambientes de despliegue
+## CI/CD Pipeline
 
-## 📝 Validaciones
+Generated projects include GitHub Actions workflows:
 
-- **Component ID:** Debe seguir el patrón `^[a-z0-9]([a-z0-9-]*[a-z0-9])?$`
-- **Longitud máxima:** 63 caracteres
-- **Formato:** kebab-case (minúsculas, números y guiones)
-- **Restricciones:** No puede empezar o terminar con guión
+### Build & Test
+- Runs on every push
+- Executes all tests
+- Generates coverage report
 
-## 🔗 Enlaces
+### Quality Gates
+- Minimum 85% code coverage
+- Build must pass
+- Tests must pass
 
-- **Repository:** [addon-ai/backstage-templates](https://github.com/addon-ai/backstage-templates)
-- **Owner:** platform-team
-- **Lifecycle:** production
+### Artifacts
+- JAR file generation
+- Docker image build
+- Retention: 30 days
+
+## Support
+
+- **Organization**: addon-ai
+- **Repository**: https://github.com/addon-ai/backstage-templates
+- **Contact**: Platform Team
+
+## License
+
+MIT
