@@ -11,7 +11,7 @@ metadata:
   annotations:
     github.com/project-slug: addon-ai/backstage-templates
     backstage.io/techdocs-ref: dir:.
-spec:
+    backstage.io/source-template: template:default/back-ms-moviesspec:
   type: service
   owner: platform-team
   lifecycle: production
