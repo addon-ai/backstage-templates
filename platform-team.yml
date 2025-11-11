@@ -1,0 +1,12 @@
+# ruta: /hexagonal-components/platform-team.yml
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: platform-team
+  title: Platform Team
+  description: El equipo que mantiene las plantillas y la plataforma.
+spec:
+  type: team
+  children: [] 
+  members:
+    - user:default/jiliar.silgado
