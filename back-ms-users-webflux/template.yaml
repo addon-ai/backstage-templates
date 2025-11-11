@@ -100,7 +100,7 @@ spec:
           enum:
             - "17"
             - "21"
-        springBootVersion:
+        spring-bootVersion:
           title: Versión de Spring Boot
           type: string
           description: Versión de Spring Boot
@@ -205,7 +205,7 @@ spec:
           groupId: ${{ parameters.groupId }}
           artifactId: ${{ parameters.artifactId }}
           javaVersion: ${{ parameters.javaVersion }}
-          springBootVersion: ${{ parameters.springBootVersion }}
+          spring-bootVersion: ${{ parameters.spring-bootVersion }}
           java_package_path: ${{ (parameters.groupId | replace(".", "/")) + "/" + (parameters.component_id | replace("-", "")) }}
           java_package_name: ${{ parameters.groupId + "." + (parameters.component_id | replace("-", "")) }}
           database: ${{ parameters.database }}
@@ -256,7 +256,7 @@ spec:
           
           ### 🏛️ Architecture
           - **Pattern:** Hexagonal Architecture (Ports and Adapters)
-          - **Framework:** Spring Boot ${{ parameters.springBootVersion }} with spring-webflux
+          - **Framework:** Spring Boot ${{ parameters.spring-bootVersion }} with spring-webflux
           - **Java Version:** ${{ parameters.javaVersion }}
           
           ### 📦 Components
