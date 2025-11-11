@@ -1,13 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: backstage-entities
-  description: All entities for backstage templates
+  name: backstage-entities-wildcard
+  description: All entities using wildcard pattern
 spec:
   targets:
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-movies/entities/movie-entity.yml
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-movies-webflux/entities/movie-entity.yml
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-users/entities/location-entity.yml
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-users/entities/user-entity.yml
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-users-webflux/entities/location-entity.yml
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-users-webflux/entities/user-entity.yml
+    - https://github.com/addon-ai/backstage-templates/blob/main/*/entities/*.yml
