@@ -1,14 +1,11 @@
 site_name: Spring Boot Microservice Template
 site_description: Technical documentation for Spring Boot microservice template with Hexagonal Architecture
 
+docs_dir: docs
+
 nav:
   - Overview: index.md
   - Architecture: architecture.md
-  - Technology Stack: technology-stack.md
-  - Project Structure: project-structure.md
-  - Configuration: configuration.md
-  - Development Guide: development-guide.md
-  - CI/CD Pipeline: cicd-pipeline.md
 
 theme:
   name: material

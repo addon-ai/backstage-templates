@@ -1,15 +1,11 @@
 site_name: WebFlux Reactive Microservice Template
 site_description: Technical documentation for reactive WebFlux microservice template with Hexagonal Architecture
 
+docs_dir: docs
+
 nav:
   - Overview: index.md
   - Reactive Architecture: reactive-architecture.md
-  - Technology Stack: technology-stack.md
-  - Project Structure: project-structure.md
-  - Reactive Patterns: reactive-patterns.md
-  - Configuration: configuration.md
-  - Development Guide: development-guide.md
-  - CI/CD Pipeline: cicd-pipeline.md
 
 theme:
   name: material
