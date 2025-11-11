@@ -23,16 +23,16 @@ spec:
         name:
           title: Nombre del Componente
           type: string
-          description: Nombre único para el componente (ej: mi-nuevo-servicio).
+          description: "Nombre único para el componente (ej: mi-nuevo-servicio)."
           ui:field: EntityNamePicker
         description:
           title: Descripción
           type: string
-          description: Una breve descripción del servicio.
+          description: "Una breve descripción del servicio."
         owner:
           title: Propietario
           type: string
-          description: El equipo propietario de este componente.
+          description: "El equipo propietario de este componente."
           ui:field: OwnerPicker
           ui:options:
             allowedKinds: ['Group']
@@ -44,7 +44,7 @@ spec:
         repoUrl:
           title: URL del Repositorio
           type: string
-          description: La URL del repositorio en GitHub (ej: github.com?owner=mi-org&repo=mi-servicio).
+          description: "La URL del repositorio en GitHub (ej: github.com?owner=mi-org&repo=mi-servicio)."
           ui:field: RepoUrlPicker
           ui:options:
             allowedHosts:
