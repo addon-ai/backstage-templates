@@ -20,6 +20,6 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
     backstage.io/techdocs-ref: url:https://github.com/addon-ai/backstage-templates/tree/main
 spec:
-  type: template-collection
+  type: service-collection
   owner: platform-team
   lifecycle: production

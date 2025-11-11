@@ -11,7 +11,8 @@ metadata:
   annotations:
     github.com/project-slug: addon-ai/backstage-templates
 spec:
-  type: template
+  type: service
   owner: platform-team
   lifecycle: production
-  subcomponentOf: hexagonal-architecture-templates
+  dependsOn:
+    - component:default/hexagonal-architecture-templates
