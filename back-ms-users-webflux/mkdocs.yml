@@ -1,7 +1,6 @@
 site_name: 'back-ms-users-webflux'
 site_description: 'Reactive microservice for users management with Spring WebFlux'
 
-docs_dir: docs
 nav:
   - Introduction: index.md
 
