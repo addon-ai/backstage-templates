@@ -1,14 +1,14 @@
-# 👥 back-ms-movies-webflux
+# 🏗️ ${{ values.component_id }}
 
-🚀 Reactive microservice for movie rental management with Spring WebFlux
+🚀 Reactive Spring WebFlux microservice with Hexagonal Architecture
 
 **Version:** 1.0.0  
-**Author:** Jiliar Silgado <jiliar.silgado@gmail.com>  
+**Author:** ${{ values.owner }}  
 **License:** MIT
 
 ## 📋 Overview
 
-This is a Spring Boot application following Hexagonal Architecture (Ports and Adapters) principles, generated from Smithy service definitions.
+This is a reactive Spring WebFlux application following Hexagonal Architecture (Ports and Adapters) principles, generated from Backstage template.
 
 ## 🛠️ Technology Stack
 

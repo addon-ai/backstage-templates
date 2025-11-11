@@ -10,6 +10,7 @@ metadata:
     - template
   annotations:
     github.com/project-slug: addon-ai/backstage-templates
+    backstage.io/techdocs-ref: dir:./docs
 spec:
   type: service
   owner: platform-team

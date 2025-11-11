@@ -1,14 +1,14 @@
-# 👥 back-ms-movies
+# 🏗️ ${{ values.component_id }}
 
-🚀 Microservice for movie rental management
+🚀 Spring Boot microservice with Hexagonal Architecture
 
 **Version:** 1.0.0  
-**Author:** Jiliar Silgado <jiliar.silgado@gmail.com>  
+**Author:** ${{ values.owner }}  
 **License:** MIT
 
 ## 📋 Overview
 
-This is a Spring Boot application following Hexagonal Architecture (Ports and Adapters) principles, generated from Smithy service definitions.
+This is a Spring Boot application following Hexagonal Architecture (Ports and Adapters) principles, generated from Backstage template.
 
 ## 🛠️ Technology Stack
 
