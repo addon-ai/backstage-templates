@@ -4,7 +4,6 @@ metadata:
   name: hexagonal-components-location
   description: Descubre los subcomponentes de la arquitectura hexagonal
 spec:
-  type: url
   targets:
-    - ./back-ms-springboot/*.yml
-    - ./back-ms-webflux/*.yml
+    - ./back-ms-springboot/catalog-info.yml
+    - ./back-ms-webflux/catalog-info.yml
