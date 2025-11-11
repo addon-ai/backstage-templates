@@ -5,7 +5,7 @@ metadata:
   description: Reactive microservice for users management with Spring WebFlux
   tags:
     - java
-    - springWebflux
+    - spring-webflux
     - hexagonal-architecture
     - template
   annotations:

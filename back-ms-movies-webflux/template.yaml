@@ -6,7 +6,7 @@ metadata:
   description: Reactive microservice for movie rental management with Spring WebFlux
   tags:
     - java
-    - springWebflux
+    - spring-webflux
     - hexagonal-architecture
 spec:
   owner: platform-team
@@ -72,7 +72,7 @@ spec:
           default:
             - java
             - spring-boot
-            - springWebflux
+            - spring-webflux
             - hexagonal-architecture
           ui:options:
             orderable: false
@@ -256,7 +256,7 @@ spec:
           
           ### 🏛️ Architecture
           - **Pattern:** Hexagonal Architecture (Ports and Adapters)
-          - **Framework:** Spring Boot ${{ parameters.springBootVersion }} with springWebflux
+          - **Framework:** Spring Boot ${{ parameters.springBootVersion }} with spring-webflux
           - **Java Version:** ${{ parameters.javaVersion }}
           
           ### 📦 Components

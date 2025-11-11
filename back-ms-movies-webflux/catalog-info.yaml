@@ -5,7 +5,7 @@ metadata:
   description: Reactive microservice for movie rental management with Spring WebFlux
   tags:
     - java
-    - springWebflux
+    - spring-webflux
     - hexagonal-architecture
     - template
   annotations:
