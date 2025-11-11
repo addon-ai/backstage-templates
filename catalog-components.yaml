@@ -10,3 +10,7 @@ spec:
     - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-movies/catalog-info.yaml
     - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-users-webflux/catalog-info.yaml
     - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-movies-webflux/catalog-info.yaml
+    - https://github.com/addon-ai/backstage-templates/blob/main/hexagonal-architecture-components/application-component.yaml
+    - https://github.com/addon-ai/backstage-templates/blob/main/hexagonal-architecture-components/domain-component.yaml
+    - https://github.com/addon-ai/backstage-templates/blob/main/hexagonal-architecture-components/infrastructure-component.yaml
+    - https://github.com/addon-ai/backstage-templates/blob/main/hexagonal-architecture-components/utils-component.yaml

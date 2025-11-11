@@ -1,5 +1,5 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: System
 metadata:
   name: hexagonal-architecture-templates
   description: |
@@ -20,6 +20,6 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
     backstage.io/techdocs-ref: url:https://github.com/addon-ai/backstage-templates/tree/main
 spec:
-  type: service-collection
+  type: template
   owner: platform-team
   lifecycle: production

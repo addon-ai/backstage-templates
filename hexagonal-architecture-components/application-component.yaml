@@ -1,0 +1,11 @@
+# application-component.yaml
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hexagonal-app-component
+  description: Capa de aplicación que contiene la lógica de negocio central (Ports e Interactors).
+spec:
+  type: library
+  lifecycle: production
+  owner: platform-team
+  system: hexagonal-architecture-system

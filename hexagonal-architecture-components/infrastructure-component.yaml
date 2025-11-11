@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hexagonal-infra-component
+  description: Capa de infraestructura que contiene adaptadores para bases de datos, APIs externas y frameworks.
+spec:
+  type: library
+  lifecycle: production
+  owner: platform-team
+  system: hexagonal-architecture-system 

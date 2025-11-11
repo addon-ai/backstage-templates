@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hexagonal-utils-component
+  description: Módulo para utilidades, helpers, y código de soporte transversal compartido por múltiples capas.
+  tags:
+    - utilities
+    - shared
+    - helpers
+spec:
+  type: library
+  lifecycle: production
+  owner: platform-team
+  system: hexagonal-architecture-system 

@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: hexagonal-domain-component
+  description: La capa del Dominio, que contiene las Entidades, Agregados y la lógica de negocio pura de la aplicación.
+  tags:
+    - hexagonal-architecture
+    - domain-model
+    - core
+spec:
+  type: library
+  lifecycle: production
+  owner: platform-team
+  system: hexagonal-architecture-system
