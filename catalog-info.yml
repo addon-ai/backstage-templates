@@ -34,7 +34,7 @@ metadata:
   description: Ubicación de la plantilla de servicio Spring Boot Hexagonal
 spec:
   targets:
-    - ./hexagonal-architecture/templates/spring-boot-hexagonal-template.yaml
+    - ./hexagonal-architecture/templates/spring-boot-hexagonal-template.yml
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Location
@@ -43,4 +43,4 @@ metadata:
   description: Ubicación de la plantilla de servicio Spring WebFlux Hexagonal
 spec:
   targets:
-    - ./hexagonal-architecture/templates/spring-webflux-hexagonal-template.yaml
+    - ./hexagonal-architecture/templates/spring-webflux-hexagonal-template.yml

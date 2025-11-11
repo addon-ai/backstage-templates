@@ -1,9 +1,9 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: back-ms-users-webflux-template
-  title: Reactive microservice for users management with Spring WebFlux
-  description: Reactive microservice for users management with Spring WebFlux
+  name: back-ms-movies-webflux-template
+  title: Reactive microservice for movie rental management with Spring WebFlux
+  description: Reactive microservice for movie rental management with Spring WebFlux
   tags:
     - java
     - webflux
@@ -91,7 +91,7 @@ spec:
           title: Artifact ID
           type: string
           description: Artifact ID de Maven
-          default: user-service-webflux
+          default: movie-service-webflux
         javaVersion:
           title: Versión de Java
           type: string
@@ -238,7 +238,7 @@ spec:
       action: catalog:register
       input:
         repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
-        catalogInfoPath: '/catalog-info.yaml'
+        catalogInfoPath: '/catalog-info.yml'
     
     - id: create-pr-develop
       name: Create Pull Request to Develop

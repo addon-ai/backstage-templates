@@ -238,7 +238,7 @@ spec:
       action: catalog:register
       input:
         repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
-        catalogInfoPath: '/catalog-info.yaml'
+        catalogInfoPath: '/catalog-info.yml'
     
     - id: create-pr-develop
       name: Create Pull Request to Develop
