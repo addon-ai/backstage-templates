@@ -5,9 +5,9 @@ metadata:
   description: A comprehensive service for managing movie rentals with catalog and transaction processing. This service provides movie catalog management (CRUD operations), rental transaction processing, inventory tracking and availability management, late fee calculation and payment processing, and user rental history and status tracking.
   tags:
     - api
-    - movies
+    - movie
     - rental
-    - openapi
+    - open-api
   annotations:
     backstage.io/techdocs-ref: dir:.
 spec:

@@ -6,8 +6,8 @@ metadata:
   tags:
     - api
     - location
-    - geography
-    - openapi
+    - geo
+    - open-api
   annotations:
     backstage.io/techdocs-ref: dir:.
 spec:
