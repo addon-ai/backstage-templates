@@ -4,7 +4,7 @@ metadata:
   name: movie-reactive-api
   description: A comprehensive service for managing movie rentals with catalog and transaction processing. This service provides movie catalog management (CRUD operations), rental transaction processing, inventory tracking and availability management, late fee calculation and payment processing, and user rental history and status tracking.
   annotations:
-    backstage.io/techdocs-ref: dir:../../docs-movie
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: openapi
   lifecycle: experimental
