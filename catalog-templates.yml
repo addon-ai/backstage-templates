@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: backstage-templates-catalog
+  description: All Backstage templates
+spec:
+  type: url
+  targets:
+    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-users/template.yml
+    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-movies/template.yml
+    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-users-webflux/template.yml
+    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-movies-webflux/template.yml
+    - https://github.com/addon-ai/backstage-templates/blob/main/hexagonal-architecture/templates/spring-boot-hexagonal.yml
+    - https://github.com/addon-ai/backstage-templates/blob/main/hexagonal-architecture/templates/spring-webflux-hexagonal.yml
+    - https://github.com/addon-ai/backstage-templates/blob/main/hexagonal-architecture/components/application.yml
+    - https://github.com/addon-ai/backstage-templates/blob/main/hexagonal-architecture/components/domain.yml
+    - https://github.com/addon-ai/backstage-templates/blob/main/hexagonal-architecture/components/infrastructure.yml
+    - https://github.com/addon-ai/backstage-templates/blob/main/hexagonal-architecture/components/utils.yml

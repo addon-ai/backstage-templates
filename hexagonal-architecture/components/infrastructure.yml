@@ -1,10 +1,13 @@
-apiVersion: backstage.io/v1alpha1
-kind: Component
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
 metadata:
   name: hexagonal-infra-component
+  title: Infrastructure Layer Template
   description: Capa de infraestructura que contiene adaptadores para bases de datos, APIs externas y frameworks.
+  tags:
+    - hexagonal-architecture
+    - infrastructure-layer
+    - java
 spec:
-  type: library
-  lifecycle: production
   owner: platform-team
-  system: hexagonal-architecture-system 
+  type: other 

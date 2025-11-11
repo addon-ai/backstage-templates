@@ -1,14 +1,14 @@
-apiVersion: backstage.io/v1alpha1
-kind: Component
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
 metadata:
   name: hexagonal-domain-component
+  title: Domain Layer Template
   description: La capa del Dominio, que contiene las Entidades, Agregados y la lógica de negocio pura de la aplicación.
   tags:
     - hexagonal-architecture
     - domain-model
     - core
+    - java
 spec:
-  type: library
-  lifecycle: production
   owner: platform-team
-  system: hexagonal-architecture-system
+  type: other
