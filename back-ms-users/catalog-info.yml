@@ -17,4 +17,6 @@ spec:
   type: service
   owner: platform-team
   lifecycle: production
-  system: users-system
+  system: user-system
+  providesApis:
+    - user-api
