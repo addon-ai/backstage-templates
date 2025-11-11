@@ -15,4 +15,4 @@ spec:
   owner: platform-team
   lifecycle: production
   dependsOn:
-    - component:default/backstage-templates
+    - component:default/hexagonal-architecture-templates
