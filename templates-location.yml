@@ -7,5 +7,3 @@ spec:
   targets:
     - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-springboot/template.yml
     - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-webflux/template.yml
-  rules:
-    - allow: [Template]

@@ -9,7 +9,7 @@ metadata:
     - webflux
     - hexagonal-architecture
 spec:
-  owner: platform-team
+  owner: user:guest
   type: service
   
   parameters:

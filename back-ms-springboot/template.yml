@@ -9,7 +9,7 @@ metadata:
     - springboot
     - hexagonal-architecture
 spec:
-  owner: platform-team
+  owner: user:guest
   type: service
   
   parameters:
@@ -280,6 +280,9 @@ spec:
     links:
       - title: Repository
         url: ${{ steps.publish.output.remoteUrl }}
+      - title: Open in catalog
+        icon: catalog
+        entityRef: ${{ steps.register.output.entityRef }}
       - title: Open in catalog
         icon: catalog
         entityRef: ${{ steps.register.output.entityRef }}
