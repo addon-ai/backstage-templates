@@ -18,7 +18,7 @@ metadata:
       url: https://github.com/addon-ai/backstage-templates/blob/main/README.md
   annotations:
     github.com/project-slug: addon-ai/backstage-templates
-    backstage.io/techdocs-ref: url:https://github.com/addon-ai/backstage-templates/tree/main
+    backstage.io/techdocs-ref: dir:./docs
 spec:
   type: template-collection
   owner: platform-team
