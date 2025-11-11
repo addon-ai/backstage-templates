@@ -1,34 +1,18 @@
-# Backstage Software Templates
+# Hexagonal Architecture Templates
 
-This repository contains Backstage Software Templates (Golden Paths) for creating Spring Boot microservices with Hexagonal Architecture.
+Spring Boot service templates with Hexagonal Architecture (Ports and Adapters).
 
 ## Available Templates
 
-- **Spring Boot Service** - Traditional Spring Boot with JPA
-- **WebFlux Service** - Reactive Spring Boot with R2DBC
+- **back-ms-users**: User management microservice (Spring Boot)
+- **back-ms-movies**: Movie management microservice (Spring Boot)
+- **back-ms-users-webflux**: User management microservice (WebFlux)
+- **back-ms-movies-webflux**: Movie management microservice (WebFlux)
 
-## Features
+## Architecture
 
-- ✅ Hexagonal Architecture (Ports and Adapters)
-- ✅ Spring Boot 21
-- ✅ Complete CRUD operations
-- ✅ Database integration (PostgreSQL)
-- ✅ Docker support
-- ✅ CI/CD workflows
-- ✅ Test coverage (85%)
+All templates follow Hexagonal Architecture principles with three main layers:
 
-## Usage
-
-1. Navigate to Backstage UI
-2. Go to "Create" section
-3. Select desired template
-4. Fill in parameters
-5. Click "Create"
-
-## Documentation
-
-See [docs/index.md](docs/index.md) for detailed documentation.
-
-## Organization
-
-**addon-ai**
+- **Domain Layer**: Core business logic and entities
+- **Application Layer**: Use cases and DTOs
+- **Infrastructure Layer**: Controllers, repositories, and external adapters

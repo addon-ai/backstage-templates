@@ -17,7 +17,7 @@ Hexagonal Architecture, also known as **Ports and Adapters**, is an architectura
 
 We provide **2 main templates** to cover different architectural needs:
 
-### 🍃 Spring Boot Template (`back-ms-springboot`)
+### 🍃 Spring Boot Template (`springboot-service`)
 **Traditional Spring Boot microservice with blocking I/O**
 
 - **Best for**: Standard CRUD operations, traditional web applications
@@ -25,7 +25,7 @@ We provide **2 main templates** to cover different architectural needs:
 - **Use cases**: Most business applications, simple to moderate complexity
 - **Performance**: Good for typical web workloads
 
-### ⚡ WebFlux Template (`back-ms-webflux`)  
+### ⚡ WebFlux Template (`webflux-service`)  
 **Reactive microservice with non-blocking I/O**
 
 - **Best for**: High-concurrency, I/O intensive applications
@@ -80,5 +80,3 @@ Both templates include:
 ## Next Steps
 
 - [Available Templates](templates.md) - Detailed comparison of templates
-- [Architecture Guide](architecture.md) - Deep dive into hexagonal architecture
-- [Getting Started](getting-started.md) - Step-by-step guide to use templates

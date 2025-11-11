@@ -6,7 +6,7 @@ Our collection provides **2 main templates** designed for different architectura
 
 ## 🍃 Spring Boot Template
 
-### `back-ms-springboot`
+### `springboot-service`
 **Traditional Spring Boot microservice with Hexagonal Architecture**
 
 | Aspect | Details |
@@ -34,17 +34,11 @@ Our collection provides **2 main templates** designed for different architectura
 - **Simple to moderate complexity** business logic
 - **Integration with legacy systems** that use blocking I/O
 
-#### Performance Characteristics
-- **Throughput**: Good for typical web workloads (hundreds of concurrent users)
-- **Memory Usage**: Standard (one thread per request)
-- **Latency**: Low for simple operations
-- **Scalability**: Vertical scaling, limited by thread pool size
-
 ---
 
 ## ⚡ WebFlux Template
 
-### `back-ms-webflux`
+### `webflux-service`
 **Reactive microservice with Spring WebFlux and Hexagonal Architecture**
 
 | Aspect | Details |
@@ -72,12 +66,6 @@ Our collection provides **2 main templates** designed for different architectura
 - **Microservices architectures** with many inter-service calls
 - **Applications requiring** high throughput and low resource usage
 
-#### Performance Characteristics
-- **Throughput**: Excellent for high-concurrency workloads
-- **Memory Usage**: Low (shared event loop threads)
-- **Latency**: Very low for I/O operations
-- **Scalability**: Horizontal scaling, virtually unlimited concurrency
-
 ---
 
 ## Template Comparison
@@ -90,8 +78,6 @@ Our collection provides **2 main templates** designed for different architectura
 | **HTTP Client** | RestTemplate/WebClient | WebClient (reactive) |
 | **Error Handling** | Try-catch blocks | Reactive error operators |
 | **Testing** | Standard Spring Test | WebTestClient, StepVerifier |
-| **Debugging** | Traditional debugging | Reactive debugging tools |
-| **Team Expertise** | Standard Spring knowledge | Reactive programming skills |
 
 ## Architecture Commonalities
 
@@ -117,7 +103,7 @@ Both templates share the same **Hexagonal Architecture** structure:
 
 ## Choosing the Right Template
 
-### Choose **Spring Boot** (`back-ms-springboot`) when:
+### Choose **Spring Boot** (`springboot-service`) when:
 - ✅ Building traditional web applications
 - ✅ Team is familiar with Spring Boot
 - ✅ Moderate concurrency requirements
@@ -125,20 +111,10 @@ Both templates share the same **Hexagonal Architecture** structure:
 - ✅ Integration with blocking systems
 - ✅ Rapid development is priority
 
-### Choose **WebFlux** (`back-ms-webflux`) when:
+### Choose **WebFlux** (`webflux-service`) when:
 - ✅ High concurrency requirements
 - ✅ I/O intensive operations
 - ✅ Real-time or streaming applications
 - ✅ Microservices with many external calls
 - ✅ Resource efficiency is critical
 - ✅ Team has reactive programming experience
-
-## Getting Started
-
-1. **Select the appropriate template** based on your requirements
-2. **Use Backstage** to generate your microservice
-3. **Follow the generated README** for setup instructions
-4. **Customize the business logic** in the domain layer
-5. **Add your specific endpoints** in the infrastructure layer
-
-Both templates provide comprehensive documentation and examples to help you get started quickly while maintaining clean architecture principles.

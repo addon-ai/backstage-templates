@@ -15,11 +15,11 @@ metadata:
     - microservices
   links:
     - title: Documentation
-      url: https://github.com/addon-ai/backstage-templates/blob/master/README.md
+      url: https://github.com/addon-ai/backstage-templates/blob/main/README.md
   annotations:
     github.com/project-slug: addon-ai/backstage-templates
-    backstage.io/techdocs-ref: dir:./docs
+    backstage.io/techdocs-ref: url:https://github.com/addon-ai/backstage-templates/tree/main
 spec:
-  type: component-collection
+  type: template-collection
   owner: platform-team
   lifecycle: production
