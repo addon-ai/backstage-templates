@@ -1,3 +1,5 @@
+# Documento 1: El Componente (la "caja de herramientas")
+# Esto es lo que tú proporcionaste, lo cual es perfecto.
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -23,3 +25,22 @@ spec:
   type: template-collection
   owner: platform-team
   lifecycle: production
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: spring-boot-hexagonal-template-location
+  description: Ubicación de la plantilla de servicio Spring Boot Hexagonal
+spec:
+  targets:
+    - ./hexagonal-architecture/templates/spring-boot-hexagonal-template.yaml
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: spring-webflux-hexagonal-template-location
+  description: Ubicación de la plantilla de servicio Spring WebFlux Hexagonal
+spec:
+  targets:
+    - ./hexagonal-architecture/templates/spring-webflux-hexagonal-template.yaml

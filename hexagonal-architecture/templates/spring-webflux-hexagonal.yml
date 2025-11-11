@@ -1,0 +1,90 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: spring-webflux-hexagonal
+  title: Servicio Spring WebFlux (Arquitectura Hexagonal)
+  description: Crea un nuevo microservicio Spring WebFlux (reactivo) usando arquitectura hexagonal.
+  tags:
+    - java
+    - spring-boot
+    - webflux
+    - reactive
+    - hexagonal-architecture
+    - microservice
+spec:
+  owner: platform-team
+  type: service
+
+  # Parámetros (El Formulario)
+  parameters:
+    - title: Detalles del Componente
+      required:
+        - name
+        - owner
+      properties:
+        name:
+          title: Nombre del Componente
+          type: string
+          description: Nombre único para el componente (ej: mi-servicio-reactivo).
+          ui:field: EntityNamePicker
+        description:
+          title: Descripción
+          type: string
+          description: Una breve descripción del servicio.
+        owner:
+          title: Propietario
+          type: string
+          description: El equipo propietario de este componente.
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds: ['Group']
+
+    - title: Configuración del Repositorio
+      required:
+        - repoUrl
+      properties:
+        repoUrl:
+          title: URL del Repositorio
+          type: string
+          description: La URL del repositorio en GitHub (ej: github.com?owner=mi-org&repo=mi-servicio).
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts:
+              - github.com
+
+  # Pasos (Las Acciones)
+  steps:
+    - id: fetch-skeleton
+      name: Obtener Esqueleto de la Plantilla
+      action: fetch:template
+      input:
+        # IMPORTANTE: Esta URL es la única diferencia clave
+        url: ./skeleton/spring-webflux-hexagonal 
+        values:
+          name: ${{ parameters.name }}
+          description: ${{ parameters.description }}
+          owner: ${{ parameters.owner }}
+
+    - id: publish
+      name: Publicar en GitHub
+      action: publish:github
+      input:
+        allowedHosts: ['github.com']
+        description: ${{ parameters.description }}
+        repoUrl: ${{ parameters.repoUrl }}
+
+    - id: register
+      name: Registrar en el Catálogo
+      action: catalog:register
+      input:
+        repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
+        catalogInfoPath: '/catalog-info.yaml'
+
+  # Salida
+  output:
+    links:
+      - title: Ver Repositorio
+        url: ${{ steps.publish.output.remoteUrl }}
+      - title: Abrir en el Catálogo
+        icon: catalog
+        entityRef: ${{ steps.register.output.entityRef }}
