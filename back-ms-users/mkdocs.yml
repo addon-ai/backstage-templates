@@ -1,6 +1,8 @@
 site_name: 'back-ms-users'
 site_description: 'Microservice for users management'
 
+docs_dir: docs
+
 nav:
   - Introduction: index.md
 

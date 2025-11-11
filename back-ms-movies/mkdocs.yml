@@ -1,6 +1,7 @@
 site_name: 'back-ms-movies'
 site_description: 'Microservice for movie rental management'
 
+docs_dir: docs
 nav:
   - Introduction: index.md
 

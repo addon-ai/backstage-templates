@@ -12,6 +12,6 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
     backstage.io/techdocs-ref: dir:.
 spec:
-  type: template
+  type: service
   owner: platform-team
   lifecycle: production
