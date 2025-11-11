@@ -6,4 +6,5 @@ metadata:
 spec:
   type: url
   targets:
-    - ./hexagonal-components/*.yml
+    - ./back-ms-springboot/*.yml
+    - ./back-ms-webflux/*.yml

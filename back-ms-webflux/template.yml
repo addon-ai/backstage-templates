@@ -1,12 +1,12 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: back-ms-movies
-  title: Microservice for movie rental management
-  description: Microservice for movie rental management
+  name: back-ms-webflux
+  title: WebFlux Reactive Microservice Template
+  description: Template for generating WebFlux reactive microservices with Hexagonal Architecture
   tags:
     - java
-    - springboot
+    - webflux
     - hexagonal-architecture
 spec:
   owner: platform-team
@@ -72,7 +72,7 @@ spec:
           default:
             - java
             - spring-boot
-            - springboot
+            - webflux
             - hexagonal-architecture
           ui:options:
             orderable: false
@@ -91,7 +91,7 @@ spec:
           title: Artifact ID
           type: string
           description: Artifact ID de Maven
-          default: movie-service
+          default: movie-service-webflux
         javaVersion:
           title: Versión de Java
           type: string
@@ -256,7 +256,7 @@ spec:
           
           ### 🏛️ Architecture
           - **Pattern:** Hexagonal Architecture (Ports and Adapters)
-          - **Framework:** Spring Boot ${{ parameters.springBootVersion }} with springboot
+          - **Framework:** Spring Boot ${{ parameters.springBootVersion }} with webflux
           - **Java Version:** ${{ parameters.javaVersion }}
           
           ### 📦 Components

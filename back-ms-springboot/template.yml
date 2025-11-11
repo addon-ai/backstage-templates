@@ -1,12 +1,12 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: back-ms-users-webflux-template
-  title: Reactive microservice for users management with Spring WebFlux
-  description: Reactive microservice for users management with Spring WebFlux
+  name: back-ms-springboot
+  title: Spring Boot Microservice Template
+  description: Template for generating Spring Boot microservices with Hexagonal Architecture
   tags:
     - java
-    - webflux
+    - springboot
     - hexagonal-architecture
 spec:
   owner: platform-team
@@ -72,7 +72,7 @@ spec:
           default:
             - java
             - spring-boot
-            - webflux
+            - springboot
             - hexagonal-architecture
           ui:options:
             orderable: false
@@ -91,7 +91,7 @@ spec:
           title: Artifact ID
           type: string
           description: Artifact ID de Maven
-          default: user-service-webflux
+          default: movie-service
         javaVersion:
           title: Versión de Java
           type: string
@@ -256,7 +256,7 @@ spec:
           
           ### 🏛️ Architecture
           - **Pattern:** Hexagonal Architecture (Ports and Adapters)
-          - **Framework:** Spring Boot ${{ parameters.springBootVersion }} with webflux
+          - **Framework:** Spring Boot ${{ parameters.springBootVersion }} with springboot
           - **Java Version:** ${{ parameters.javaVersion }}
           
           ### 📦 Components

@@ -1,11 +1,11 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: back-ms-movies-webflux-template
-  description: Reactive microservice for movie rental management with Spring WebFlux
+  name: back-ms-springboot
+  description: Template for generating Spring Boot microservices with Hexagonal Architecture
   tags:
     - java
-    - webflux
+    - springboot
     - hexagonal-architecture
     - template
   annotations:
