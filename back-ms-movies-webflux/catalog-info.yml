@@ -12,6 +12,7 @@ metadata:
     github.com/project-slug: addon-ai/backstage-templates
     backstage.io/techdocs-ref: dir:.
     backstage.io/source-template: template:default/back-ms-movies-webflux
+    github.com/workflows: ci-cd.yml
 spec:
   type: service
   owner: platform-team
