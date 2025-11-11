@@ -4,9 +4,8 @@ metadata:
   name: backstage-templates-components
   description: All template components
 spec:
-  type: url
   targets:
-    - https://github.com/addon-ai/backstage-templates/blob/main/hexagonal-architecture/components/application.yml
-    - https://github.com/addon-ai/backstage-templates/blob/main/hexagonal-architecture/components/domain.yml
-    - https://github.com/addon-ai/backstage-templates/blob/main/hexagonal-architecture/components/infrastructure.yml
-    - https://github.com/addon-ai/backstage-templates/blob/main/hexagonal-architecture/components/utils.yml
+    - ./back-ms-users/catalog-info.yml
+    - ./back-ms-movies/catalog-info.yml
+    - ./back-ms-users-webflux/catalog-info.yml
+    - ./back-ms-movies-webflux/catalog-info.yml
