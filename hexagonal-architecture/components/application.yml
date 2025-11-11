@@ -10,4 +10,4 @@ metadata:
     - java
 spec:
   owner: platform-team
-  type: other
+  type: service

@@ -1,14 +1,12 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: backstage-templates-components
-  description: All template components
+  name: layer-templates-locations
+  description: Apunta a las plantillas para capas de arquitectura
 spec:
-  type: url
   targets:
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-users/catalog-info.yml
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-movies/catalog-info.yml
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-users-webflux/catalog-info.yml
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-movies-webflux/catalog-info.yml
-
-
+    # ¡Aquí están tus nuevos archivos!
+    - ./hexagonal-architecture/components/application.yml
+    - ./hexagonal-architecture/components/domain.yml
+    - ./hexagonal-architecture/components/infrastructure.yml
+    - ./hexagonal-architecture/components/utils.yml

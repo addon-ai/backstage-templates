@@ -1,5 +1,3 @@
-# Documento 1: El Componente (la "caja de herramientas")
-# Esto es lo que tú proporcionaste, lo cual es perfecto.
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
