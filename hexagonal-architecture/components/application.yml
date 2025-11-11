@@ -1,5 +1,5 @@
-apiVersion: scaffolder.backstage.io/v1beta3
-kind: Template
+apiVersion: backstage.io/v1alpha1
+kind: Component
 metadata:
   name: hexagonal-app-component
   title: Application Layer Template
@@ -9,5 +9,7 @@ metadata:
     - application-layer
     - java
 spec:
+  type: template
+  lifecycle: production
   owner: platform-team
-  type: service
+  system: hexagonal-architecture-system

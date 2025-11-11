@@ -1,5 +1,5 @@
-apiVersion: scaffolder.backstage.io/v1beta3
-kind: Template
+apiVersion: backstage.io/v1alpha1
+kind: Component
 metadata:
   name: hexagonal-domain-component
   title: Domain Layer Template
@@ -10,5 +10,7 @@ metadata:
     - core
     - java
 spec:
+  type: template
+  lifecycle: production
   owner: platform-team
-  type: other
+  system: hexagonal-architecture-system
