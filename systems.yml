@@ -1,13 +1,13 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: movies-system
-  description: Movies management system
+  name: movie-system
+  description: Movie management system
 spec:
   owner: platform-team\n---\napiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: users-system
-  description: Users management system
+  name: user-system
+  description: User management system
 spec:
   owner: platform-team\n
