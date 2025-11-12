@@ -9,6 +9,6 @@ spec:
   type: openapi
   lifecycle: experimental
   owner: platform-team
-  system: movies-system
+  system: movie-system
   definition:
     $text: ../../openapi/MovieService.openapi.json

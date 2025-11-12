@@ -4,10 +4,12 @@ metadata:
   name: movie-system
   description: Movie management system
 spec:
-  owner: platform-team\n---\napiVersion: backstage.io/v1alpha1
+  owner: platform-team
+---
+apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
   name: user-system
   description: User management system
 spec:
-  owner: platform-team\n
+  owner: platform-team
