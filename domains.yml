@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: movies
+  description: Movie catalog and rental management domain
+  title: Movies
+spec:
+  owner: platform-team
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: users
+  description: User management and authentication domain
+  title: Users
+spec:
+  owner: platform-team

@@ -5,6 +5,7 @@ metadata:
   description: Movies management system
 spec:
   owner: platform-team
+  domain: movies
 ---
 apiVersion: backstage.io/v1alpha1
 kind: System
@@ -13,3 +14,4 @@ metadata:
   description: Users management system
 spec:
   owner: platform-team
+  domain: users
