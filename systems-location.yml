@@ -1,8 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Location
-metadata:
-  name: systems-location
-  description: System definitions
-spec:
-  targets:
-    - https://github.com/addon-ai/backstage-templates/blob/main/commons/systems.yml
