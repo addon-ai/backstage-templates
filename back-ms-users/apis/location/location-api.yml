@@ -10,6 +10,6 @@ spec:
   type: openapi
   lifecycle: experimental
   owner: platform-team
-  system: users-system
+  system: location-system
   definition:
     $text: ../../openapi/LocationService.openapi.json

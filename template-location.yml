@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: backstage-templates-location
+  description: Software Templates for creating new services
+spec:
+  targets:
+    - https://github.com/addon-ai/backstage-templates/blob/main/templates/*/template.yml
