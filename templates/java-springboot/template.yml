@@ -1,18 +1,18 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: java-springboot
-  title: Spring Boot Microservice
-  description: Create a new Spring Boot microservice with Hexagonal Architecture
+  name: java-spring-webflux
+  title: Spring WebFlux Microservice
+  description: Create a new reactive Spring WebFlux microservice with Hexagonal Architecture
   annotations:
     backstage.io/techdocs-ref: dir:.
   tags:
-    - spring-boot
+    - spring-webflux
     - java
     - hexagonal
     - microservice
-    - jpa
-    - mvc
+    - r2dbc
+    - reactive
 spec:
   owner: platform-team
   type: service
@@ -27,7 +27,7 @@ spec:
           title: Nombre del Componente
           type: string
           description: Identificador único del componente (ej. user-service)
-          default: user-service
+          default: user-service-webflux
           pattern: '^[a-z0-9-]+$'
           ui:autofocus: true
           ui:help: 'Usar kebab-case: minúsculas y guiones'
@@ -35,7 +35,7 @@ spec:
           title: Descripción
           type: string
           description: Descripción breve del servicio
-          default: Create a new Spring Boot microservice with Hexagonal Architecture
+          default: Create a new reactive Spring WebFlux microservice with Hexagonal Architecture
           ui:widget: textarea
           ui:options:
             rows: 3
@@ -57,7 +57,7 @@ spec:
           title: Artifact ID
           type: string
           description: Artifact ID de Maven
-          default: user-service
+          default: user-service-webflux
         javaVersion:
           title: Versión de Java
           type: string
@@ -127,7 +127,11 @@ spec:
         description: ${{ parameters.description }}
         repoUrl: ${{ parameters.repoUrl }}
         repoVisibility: private
-        defaultBranch: main
+        # ---
+        # ESTE ES EL ÚNICO CAMBIO:
+        # Ahora el repositorio se crea con 'develop' como rama por defecto.
+        # ---
+        defaultBranch: develop
 
     - id: register
       name: Register Component
@@ -142,6 +146,10 @@ spec:
       input:
         repoUrl: ${{ parameters.repoUrl }}
         branchName: feature/initial-setup
+        # ---
+        # Ahora esto funciona, porque 'develop' SÍ existe
+        # (fue creada en el paso 'publish').
+        # ---
         targetBranchName: develop
         title: 'feat: Initial project setup from Backstage'
         description: |
@@ -151,7 +159,7 @@ spec:
           
           ### 🏛️ Architecture
           - **Pattern:** Hexagonal Architecture (Ports and Adapters)
-          - **Framework:** Spring Boot ${{ parameters.springBootVersion }} with springBoot
+          - **Framework:** Spring Boot ${{ parameters.springBootVersion }} with springWebflux
           - **Java Version:** ${{ parameters.javaVersion }}
           
           ### 📦 Components
@@ -174,3 +182,4 @@ spec:
         entityRef: ${{ steps.register.output.entityRef }}
       - title: Pull Request
         url: ${{ steps['create-pr-develop'].output.remoteUrl }}
+        
