@@ -230,7 +230,6 @@ spec:
           artifactId: ${{ parameters.artifactId }}
           javaVersion: ${{ parameters.javaVersion }}
           springBootVersion: ${{ parameters.springBootVersion }}
-          groupId: ${{ parameters.groupId }}
           serviceName: ${{ parameters.component_id | replace("-", "") }}
           database: ${{ parameters.database }}
           enableLiquibase: ${{ parameters.enableLiquibase }}
