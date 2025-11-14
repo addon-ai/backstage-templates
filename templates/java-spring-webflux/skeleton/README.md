@@ -1,4 +1,4 @@
-{{=<% %>=}}# ${{ values.component_id }}
+# ${{ values.component_id }}
 
 ${{ values.description }}
 
@@ -126,4 +126,3 @@ This project is licensed under the MIT License.
 
 - [Repository](${{ values.repoUrl }})
 - [Documentation](${{ values.repoUrl }}/blob/main/README.md)
-<%={{ }}=%>

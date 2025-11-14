@@ -114,6 +114,11 @@ spec:
           port: 8080
           system: "user-system"
           lifecycle: "experimental"
+          mapstructVersion: "1.5.5.Final"
+          lombokVersion: "1.18.30"
+          springdocVersion: "2.1.0"
+          jacocoVersion: "0.8.11"
+          lombokMapstructBindingVersion: "0.2.0"
 
     - id: publish
       name: Publish to GitHub
@@ -123,8 +128,6 @@ spec:
         repoUrl: ${{ parameters.repoUrl }}
         repoVisibility: private
         defaultBranch: main
-        gitAuthorName: Backstage Scaffolder
-        gitAuthorEmail: scaffolder@backstage.io
 
     - id: register
       name: Register Component
