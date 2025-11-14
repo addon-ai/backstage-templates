@@ -1,11 +1,11 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: hexagonal-components-location
+  name: catalog-location
   description: All template components using wildcard pattern
 spec:
   targets:
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-movies/catalog-info.yml
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-movies-webflux/catalog-info.yml
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-users/catalog-info.yml
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-users-webflux/catalog-info.yml
+    - ./back-ms-users/catalog-info.yml
+    - ./back-ms-movies/catalog-info.yml
+    - ./back-ms-users-webflux/catalog-info.yml
+    - ./back-ms-movies-webflux/catalog-info.yml

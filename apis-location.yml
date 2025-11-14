@@ -1,11 +1,11 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  name: backstage-apis-wildcard
+  name: apis-location
   description: All APIs using wildcard pattern
 spec:
   targets:
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-movies/apis/movies/movies-api.yml
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-movies-webflux/apis/movies/movies-api.yml
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-users/apis/users/users-api.yml
-    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-users-webflux/apis/users/users-api.yml
+    - ./back-ms-users/apis/users/users-api.yml
+    - ./back-ms-movies/apis/movies/movies-api.yml
+    - ./back-ms-users-webflux/apis/users/users-api.yml
+    - ./back-ms-movies-webflux/apis/movies/movies-api.yml
