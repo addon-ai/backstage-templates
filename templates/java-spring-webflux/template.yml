@@ -128,34 +128,7 @@ spec:
         repoUrl: ${{ parameters.repoUrl }}
         repoVisibility: private
         defaultBranch: main
-    - id: create-develop
-      name: Create develop Branch
-      action: github:repo:create-branch
-      input:
-        repoUrl: ${{ parameters.repoUrl }}
-        branchName: develop
-        sourceBranchName: main
-    - id: create-test
-      name: Create test Branch
-      action: github:repo:create-branch
-      input:
-        repoUrl: ${{ parameters.repoUrl }}
-        branchName: test
-        sourceBranchName: main
-    - id: create-staging
-      name: Create staging Branch
-      action: github:repo:create-branch
-      input:
-        repoUrl: ${{ parameters.repoUrl }}
-        branchName: staging
-        sourceBranchName: main
-    - id: create-master
-      name: Create master Branch
-      action: github:repo:create-branch
-      input:
-        repoUrl: ${{ parameters.repoUrl }}
-        branchName: master
-        sourceBranchName: main
+
     - id: register
       name: Register Component
       action: catalog:register
