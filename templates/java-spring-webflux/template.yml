@@ -127,11 +127,7 @@ spec:
         description: ${{ parameters.description }}
         repoUrl: ${{ parameters.repoUrl }}
         repoVisibility: private
-        # ---
-        # ESTE ES EL ÚNICO CAMBIO:
-        # Ahora el repositorio se crea con 'develop' como rama por defecto.
-        # ---
-        defaultBranch: develop
+        defaultBranch: main
 
     - id: register
       name: Register Component
@@ -146,10 +142,6 @@ spec:
       input:
         repoUrl: ${{ parameters.repoUrl }}
         branchName: feature/initial-setup
-        # ---
-        # Ahora esto funciona, porque 'develop' SÍ existe
-        # (fue creada en el paso 'publish').
-        # ---
         targetBranchName: develop
         title: 'feat: Initial project setup from Backstage'
         description: |
@@ -182,4 +174,3 @@ spec:
         entityRef: ${{ steps.register.output.entityRef }}
       - title: Pull Request
         url: ${{ steps['create-pr-develop'].output.remoteUrl }}
-        

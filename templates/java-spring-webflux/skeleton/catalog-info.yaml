@@ -5,8 +5,7 @@ metadata:
   description: ${{ values.description }}
   annotations:
     github.com/project-slug: ${{ values.owner + '/' + values.component_id }}
-    backstage.io/source-template: template:default/back-ms-users-webflux
-    github.com/workflows: ci-cd.yml
+    backstage.io/techdocs-ref: dir:.
   tags:
   links:
     - url: https://github.com/${{ values.owner }}/${{ values.component_id }}
