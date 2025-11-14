@@ -5,4 +5,7 @@ metadata:
   description: All APIs using wildcard pattern
 spec:
   targets:
-    - https://github.com/addon-ai/backstage-templates/blob/main/*/apis/*/*-api.yml
+    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-movies/apis/movies/movies-api.yml
+    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-movies-webflux/apis/movies/movies-api.yml
+    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-users/apis/users/users-api.yml
+    - https://github.com/addon-ai/backstage-templates/blob/main/back-ms-users-webflux/apis/users/users-api.yml
