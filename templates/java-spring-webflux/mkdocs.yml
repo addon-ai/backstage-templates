@@ -1,0 +1,17 @@
+site_name: 'Spring WebFlux Microservice'
+site_description: 'Create a new reactive Spring WebFlux microservice with Hexagonal Architecture'
+
+nav:
+  - Overview: index.md
+  - Architecture: architecture.md
+  - Features: features.md
+  - Usage: usage.md
+
+plugins:
+  - techdocs-core
+
+theme:
+  name: material
+  palette:
+    primary: teal
+    accent: teal

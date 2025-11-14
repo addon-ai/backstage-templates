@@ -19,8 +19,6 @@ spec:
   lifecycle: production
   system: user-system
   providesApis:
-    - location-api
-    - user-api
   dependsOn:
     - resource:java-21
     - resource:springboot-3-2-5

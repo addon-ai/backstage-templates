@@ -19,7 +19,6 @@ spec:
   lifecycle: production
   system: movie-system
   providesApis:
-    - movie-api
   dependsOn:
     - resource:java-21
     - resource:springboot-3-2-5
