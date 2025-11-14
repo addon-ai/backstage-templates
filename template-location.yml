@@ -5,4 +5,5 @@ metadata:
   description: Software Templates for creating new services
 spec:
   targets:
-    - https://github.com/addon-ai/backstage-templates/blob/main/templates/*/template.yml
+    - https://github.com/addon-ai/backstage-templates/blob/main/templates/java-springboot/template.yml
+    - https://github.com/addon-ai/backstage-templates/blob/main/templates/java-spring-webflux/template.yml
