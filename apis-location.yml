@@ -4,4 +4,5 @@ metadata:
   name: apis-location
   description: All APIs using wildcard pattern
 spec:
-  targets: []
+  targets:
+    - https://github.com/addon-ai/backstage-templates/blob/main/*/apis/*/*-api.yml
