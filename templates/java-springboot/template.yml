@@ -73,7 +73,6 @@ spec:
             - "3.2.5"
             - "3.3.0"
     
-
     
     - title: Repositorio
       required:
@@ -100,6 +99,7 @@ spec:
           description: ${{ parameters.description }}
           owner: ${{ parameters.owner }}
           email: ${{ parameters.email }}
+          repoUrl: ${{ parameters.repoUrl }}
           version: "1.0.0"
           groupId: "com.example"
           artifactId: ${{ parameters.artifactId }}
