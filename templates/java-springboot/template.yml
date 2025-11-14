@@ -4,6 +4,8 @@ metadata:
   name: java-springboot
   title: Spring Boot Microservice
   description: Create a new Spring Boot microservice with Hexagonal Architecture
+  annotations:
+    backstage.io/techdocs-ref: dir:.
   tags:
     - spring-boot
     - java

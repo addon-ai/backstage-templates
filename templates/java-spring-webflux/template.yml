@@ -4,6 +4,8 @@ metadata:
   name: java-spring-webflux
   title: Spring WebFlux Microservice
   description: Create a new reactive Spring WebFlux microservice with Hexagonal Architecture
+  annotations:
+    backstage.io/techdocs-ref: dir:.
   tags:
     - spring-webflux
     - java
