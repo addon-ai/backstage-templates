@@ -20,12 +20,12 @@ spec:
       required:
         - component_id
         - owner
-        - system
       properties:
         component_id:
           title: Nombre del Componente
           type: string
           description: Identificador único del componente (ej. user-service)
+          default: user-service-webflux
           pattern: '^[a-z0-9-]+$'
           ui:autofocus: true
           ui:help: 'Usar kebab-case: minúsculas y guiones'
@@ -33,6 +33,7 @@ spec:
           title: Descripción
           type: string
           description: Descripción breve del servicio
+          default: Create a new reactive Spring WebFlux microservice with Hexagonal Architecture
           ui:widget: textarea
           ui:options:
             rows: 3
@@ -40,80 +41,21 @@ spec:
           title: Propietario
           type: string
           description: Nombre del propietario del componente
-          default: Platform Team
+          default: platform-team
         email:
           title: Email del Propietario
           type: string
           description: Email de contacto del propietario
           format: email
-          default: platform@example.com
-        system:
-          title: Sistema
-          type: string
-          description: Sistema al que pertenece el componente
-          ui:field: EntityPicker
-          ui:options:
-            allowedKinds:
-              - System
-            defaultKind: System
-        lifecycle:
-          title: Ciclo de Vida
-          type: string
-          description: Estado del ciclo de vida del componente
-          default: experimental
-          enum:
-            - experimental
-            - production
-            - deprecated
-          enumNames:
-            - 'Experimental - En desarrollo'
-            - 'Production - En producción'
-            - 'Deprecated - Obsoleto'
-        version:
-          title: Versión
-          type: string
-          description: Versión inicial del proyecto
-          default: "1.0.0"
-          pattern: '^\d+\.\d+\.\d+$'
-        tags:
-          title: Etiquetas
-          type: array
-          description: Etiquetas para clasificar el componente
-          items:
-            type: string
-          default:
-            - spring-webflux
-            - java
-            - hexagonal
-            - microservice
-            - r2dbc
-            - reactive
-          ui:options:
-            orderable: false
+          default: platform@addon-ai.com
     
     - title: Configuración Java
-      required:
-        - groupId
-        - artifactId
-        - serviceName
       properties:
-        groupId:
-          title: Group ID
-          type: string
-          description: Group ID de Maven (ej. com.example)
-          default: com.example
         artifactId:
           title: Artifact ID
           type: string
           description: Artifact ID de Maven
-          default: service
-        serviceName:
-          title: Service Name
-          type: string
-          description: Nombre del servicio para paquetes Java (ej. userservice)
-          default: userservice
-          pattern: '^[a-z][a-z0-9]*$'
-          ui:help: 'Solo minúsculas sin guiones ni espacios'
+          default: user-service-webflux
         javaVersion:
           title: Versión de Java
           type: string
@@ -131,74 +73,7 @@ spec:
             - "3.2.5"
             - "3.3.0"
     
-    - title: Configuración de Base de Datos
-      required:
-        - database
-      properties:
-        database:
-          title: Base de Datos
-          type: string
-          description: Motor de base de datos
-          default: PostgreSQL
-          enum:
-            - PostgreSQL
-            - MySQL
-            - H2
-        enableLiquibase:
-          title: Habilitar Liquibase
-          type: boolean
-          description: Usar Liquibase para migraciones
-          default: true
-    
-    - title: Características Adicionales
-      properties:
-        enableSwagger:
-          title: Habilitar Swagger/OpenAPI
-          type: boolean
-          description: Documentación API con SpringDoc
-          default: true
-        enableActuator:
-          title: Habilitar Spring Actuator
-          type: boolean
-          description: Endpoints de monitoreo y salud
-          default: true
-        enableSecurity:
-          title: Habilitar Spring Security
-          type: boolean
-          description: Seguridad y autenticación
-          default: false
-        coverageThreshold:
-          title: Umbral de Cobertura
-          type: number
-          description: Porcentaje mínimo de cobertura de código
-          default: 85
-          minimum: 0
-          maximum: 100
-    
-    - title: CI/CD y DevOps
-      properties:
-        enableGithubActions:
-          title: Habilitar GitHub Actions
-          type: boolean
-          description: Pipeline CI/CD con GitHub Actions
-          default: true
-        enableDocker:
-          title: Habilitar Docker
-          type: boolean
-          description: Dockerfile y docker-compose
-          default: true
-        environments:
-          title: Ambientes
-          type: array
-          description: Ambientes de despliegue
-          default:
-            - local
-            - develop
-            - test
-            - staging
-            - prod
-          items:
-            type: string
+
     
     - title: Repositorio
       required:
@@ -225,24 +100,18 @@ spec:
           description: ${{ parameters.description }}
           owner: ${{ parameters.owner }}
           email: ${{ parameters.email }}
-          version: ${{ parameters.version }}
-          groupId: ${{ parameters.groupId }}
+          version: "1.0.0"
+          groupId: "com.example"
           artifactId: ${{ parameters.artifactId }}
           javaVersion: ${{ parameters.javaVersion }}
           springBootVersion: ${{ parameters.springBootVersion }}
-          serviceName: ${{ parameters.component_id | replace("-", "") }}
-          database: ${{ parameters.database }}
-          enableLiquibase: ${{ parameters.enableLiquibase }}
-          enableSwagger: ${{ parameters.enableSwagger }}
-          enableActuator: ${{ parameters.enableActuator }}
-          enableSecurity: ${{ parameters.enableSecurity }}
-          coverageThreshold: ${{ parameters.coverageThreshold }}
-          enableGithubActions: ${{ parameters.enableGithubActions }}
-          enableDocker: ${{ parameters.enableDocker }}
-          environments: ${{ parameters.environments }}
+          java_package_path: "com/example/userservice"
+          database: "PostgreSQL"
           application_name: ${{ parameters.component_id | replace("-", "_") }}
           database_name: ${{ (parameters.component_id | replace("-", "_")) + "_db" }}
           port: 8080
+          system: "user-system"
+          lifecycle: "experimental"
 
     - id: publish
       name: Publish to GitHub
@@ -266,7 +135,6 @@ spec:
     - id: create-pr-develop
       name: Create Pull Request to Develop
       action: publish:github:pull-request
-      if: ${{ parameters.enableGithubActions }}
       input:
         repoUrl: ${{ parameters.repoUrl }}
         branchName: feature/initial-setup
@@ -287,12 +155,6 @@ spec:
           - **Application Layer:** Use cases and ports
           - **Infrastructure Layer:** Adapters and configurations
           
-          ### 🛠️ Features
-          - Database migrations with Liquibase: ${{ parameters.enableLiquibase }}
-          - API documentation with Swagger: ${{ parameters.enableSwagger }}
-          - Monitoring with Actuator: ${{ parameters.enableActuator }}
-          - Code coverage threshold: ${{ parameters.coverageThreshold }}%
-          
           ### 🚀 Next Steps
           1. Review the generated code structure
           2. Configure environment variables
@@ -308,4 +170,3 @@ spec:
         entityRef: ${{ steps.register.output.entityRef }}
       - title: Pull Request
         url: ${{ steps['create-pr-develop'].output.remoteUrl }}
-        if: ${{ parameters.enableGithubActions }}
