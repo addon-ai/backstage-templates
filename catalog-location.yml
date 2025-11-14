@@ -5,4 +5,4 @@ metadata:
   description: All template components using wildcard pattern
 spec:
   targets:
-    - https://github.com/addon-ai/backstage-templates/blob/main/*/catalog-info.yaml
+    - https://github.com/addon-ai/backstage-templates/blob/main/*/catalog-info.yml
