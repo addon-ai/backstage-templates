@@ -129,13 +129,6 @@ spec:
         repoVisibility: private
         defaultBranch: develop
 
-    - id: register
-      name: Register Component
-      action: catalog:register
-      input:
-        repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
-        catalogInfoPath: '/catalog-info.yaml'
-    
     - id: create-pr-develop
       name: Create Pull Request to Develop
       action: publish:github:pull-request
@@ -165,12 +158,20 @@ spec:
           3. Run tests: `mvn test`
           4. Start application: `mvn spring-boot:run`
 
+    - id: notify
+      name: Send Notification
+      action: notification:send
+      input:
+        recipients: entity
+        entityRefs:
+          - ${{ 'user:default/' + parameters.owner }}
+        title: '✅ Project ${{ parameters.component_id }} created successfully'
+        info: 'Your springWebflux microservice has been created and is ready for development'
+        severity: 'normal'
+
   output:
     links:
       - title: Repository
         url: ${{ steps.publish.output.remoteUrl }}
-      - title: Open in catalog
-        icon: catalog
-        entityRef: ${{ steps.register.output.entityRef }}
       - title: Pull Request
         url: ${{ steps['create-pr-develop'].output.remoteUrl }}
