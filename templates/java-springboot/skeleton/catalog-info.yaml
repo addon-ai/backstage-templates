@@ -7,11 +7,6 @@ metadata:
     github.com/project-slug: ${{ values.owner + '/' + values.component_id }}
     backstage.io/techdocs-ref: dir:.
   tags:
-    - java
-    - spring-boot
-    - hexagonal-architecture
-    - rest-api
-    - microservice
   links:
     - url: https://github.com/${{ values.owner }}/${{ values.component_id }}
       title: Repository
