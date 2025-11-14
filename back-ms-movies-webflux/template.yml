@@ -7,9 +7,18 @@ metadata:
   tags:
     - java
     - springWebflux
+ apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: back-ms-movies-webflux
+  title: WebFlux Reactive Microservice Template
+  description: Template for generating WebFlux reactive microservices with Hexagonal Architecture
+  tags:
+    - java
+    - webflux
     - hexagonal-architecture
 spec:
-  owner: platform-team
+  owner: user:guest
   type: service
   
   parameters:
@@ -238,7 +247,7 @@ spec:
       action: catalog:register
       input:
         repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
-        catalogInfoPath: '/catalog-info.yaml'
+        catalogInfoPath: '/catalog-info.yml'
     
     - id: create-pr-develop
       name: Create Pull Request to Develop
