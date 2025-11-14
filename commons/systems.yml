@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: movies-system
+  name: movie-system
   description: Movie management system
 spec:
   owner: platform-team
@@ -10,7 +10,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: users-system
+  name: user-system
   description: User management system
 spec:
   owner: platform-team

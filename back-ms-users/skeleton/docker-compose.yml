@@ -39,9 +39,10 @@ services:
       SPRING_PROFILES_ACTIVE: local
       
       # Database connection variables
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgresql:5432/back_ms_users_db
-      SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: password123
+      DB_URL: r2dbc:postgresql://postgresql:5432/back_ms_users_db
+      FLYWAY_URL: jdbc:postgresql://postgresql:5432/back_ms_users_db
+      DB_USERNAME: postgres
+      DB_PASSWORD: password123
 
       # Reduced logging level from DEBUG to INFO
       LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_JDBC: INFO
