@@ -1,66 +1,66 @@
-# Usage Guide
+# Guía de Uso
 
-## Creating a New Service
+## Crear un Nuevo Servicio
 
-### 1. Access Template
-- Navigate to **Create** → **Choose a template** in Backstage
-- Select **Spring WebFlux Microservice**
+### 1. Acceder a la Plantilla
+- Navega a **Crear** → **Elegir una plantilla** en Backstage
+- Selecciona **Spring WebFlux Microservice**
 
-### 2. Component Information
-- **Component ID**: Unique identifier (kebab-case, e.g., `user-service-webflux`)
-- **Description**: Brief service description
-- **Owner**: Team or person responsible
-- **Email**: Contact email
+### 2. Información del Componente
+- **ID del Componente**: Identificador único (kebab-case, ej. `user-service-webflux`)
+- **Descripción**: Descripción breve del servicio
+- **Propietario**: Equipo o persona responsable
+- **Email**: Email de contacto
 
-### 3. Java Configuration
-- **Artifact ID**: Maven artifact identifier
-- **Java Version**: 17 or 21
-- **Spring Boot Version**: 3.2.5 or 3.3.0
+### 3. Configuración Java
+- **Artifact ID**: Identificador de artefacto Maven
+- **Versión de Java**: 17 o 21
+- **Versión de Spring Boot**: 3.2.5 o 3.3.0
 
-### 4. Repository
-- **Repository URL**: GitHub repository location
-- Must be under `addon-ai` organization
+### 4. Repositorio
+- **URL del Repositorio**: Ubicación del repositorio en GitHub
+- Debe estar bajo la organización `addon-ai`
 
-## Generated Project
+## Proyecto Generado
 
-### What Gets Created
+### Qué se Crea
 ```
-your-service/
+tu-servicio/
 ├── src/main/java/com/example/userservice/
 ├── src/test/java/
-├── docs/                    # TechDocs documentation
-├── .github/workflows/       # CI/CD pipelines
-├── docker-compose.yml       # Local development
-├── Dockerfile              # Container image
-├── pom.xml                 # Maven configuration
-├── catalog-info.yml        # Backstage metadata
-└── README.md               # Project documentation
+├── docs/                    # Documentación TechDocs
+├── .github/workflows/       # Pipelines CI/CD
+├── docker-compose.yml       # Desarrollo local
+├── Dockerfile              # Imagen de contenedor
+├── pom.xml                 # Configuración Maven
+├── catalog-info.yml        # Metadatos de Backstage
+└── README.md               # Documentación del proyecto
 ```
 
-### Immediate Next Steps
-1. **Review generated code structure**
-2. **Configure environment variables**
-3. **Run tests**: `./mvnw test`
-4. **Start application**: `./mvnw spring-boot:run`
-5. **Access API docs**: http://localhost:8080/swagger-ui.html
+### Próximos Pasos Inmediatos
+1. **Revisar la estructura del código generado**
+2. **Configurar variables de entorno**
+3. **Ejecutar pruebas**: `./mvnw test`
+4. **Iniciar aplicación**: `./mvnw spring-boot:run`
+5. **Acceder a documentación de API**: http://localhost:8080/swagger-ui.html
 
-### Development Workflow
-1. **Local development**: Use docker-compose for dependencies
-2. **Feature development**: Create feature branches
-3. **Testing**: Maintain 85% code coverage
-4. **Pull requests**: Automatic PR to develop branch
-5. **Deployment**: CI/CD handles build and deployment
+### Flujo de Desarrollo
+1. **Desarrollo local**: Usar docker-compose para dependencias
+2. **Desarrollo de features**: Crear ramas de características
+3. **Pruebas**: Mantener 85% de cobertura de código
+4. **Pull requests**: PR automático a rama develop
+5. **Despliegue**: CI/CD maneja construcción y despliegue
 
-## Best Practices
+## Mejores Prácticas
 
-### Reactive Programming
-- Use `Mono<T>` for single values
-- Use `Flux<T>` for multiple values
-- Avoid blocking operations
-- Chain reactive operations
+### Programación Reactiva
+- Usar `Mono<T>` para valores únicos
+- Usar `Flux<T>` para múltiples valores
+- Evitar operaciones bloqueantes
+- Encadenar operaciones reactivas
 
-### Architecture
-- Keep domain layer pure (no external dependencies)
-- Use ports and adapters pattern
-- Implement use cases in application layer
-- Configure external integrations in infrastructure layer
+### Arquitectura
+- Mantener la capa de dominio pura (sin dependencias externas)
+- Usar patrón de puertos y adaptadores
+- Implementar casos de uso en capa de aplicación
+- Configurar integraciones externas en capa de infraestructura

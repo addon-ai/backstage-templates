@@ -1,43 +1,43 @@
 # Spring WebFlux Microservice
 
-This template creates a **Spring WebFlux microservice** following **Hexagonal (Ports &amp; Adapters)** principles.
+Esta plantilla crea un **microservicio Spring WebFlux** siguiendo los principios de **Hexagonal (Ports &amp; Adapters)**.
 
-## What You Get
+## Qué Obtienes
 
-When you use this template, you'll generate a complete Spring WebFlux project with:
+Cuando usas esta plantilla, generas un proyecto completo de Spring WebFlux con:
 
-- **Spring WebFlux**: Reactive programming with non-blocking I/O
-- **R2DBC**: Reactive database connectivity
-- **Hexagonal (Ports &amp; Adapters)**: Clean separation of concerns
-- **OpenAPI Documentation**: Auto-generated API docs with SpringDoc
-- **Health Monitoring**: Spring Boot Actuator endpoints
-- **Test Coverage**: JaCoCo with 85% threshold
-- **CI/CD**: GitHub Actions workflows
-- **Docker**: Multi-stage Dockerfile and docker-compose
+- **Spring WebFlux**: Programación reactiva con I/O no bloqueante
+- **R2DBC**: Conectividad reactiva a base de datos
+- **Hexagonal (Ports &amp; Adapters)**: Separación clara de responsabilidades
+- **Documentación OpenAPI**: Documentación de API autogenerada con SpringDoc
+- **Monitoreo de Salud**: Endpoints de Spring Boot Actuator
+- **Cobertura de Pruebas**: JaCoCo con umbral del 85%
+- **CI/CD**: Flujos de trabajo de GitHub Actions
+- **Docker**: Dockerfile multi-etapa y docker-compose
 
-## Technology Stack
+## Stack Tecnológico
 
 - **Java**: 21
 - **Spring Boot**: 3.2.5
 - **Spring WebFlux**: Spring WebFlux
-- **R2DBC**: Reactive database access
-- **PostgreSQL/MySQL/H2**: Database options
-- **MapStruct**: Entity mapping
-- **Lombok**: Boilerplate reduction
-- **JaCoCo**: Code coverage
+- **R2DBC**: Acceso reactivo a base de datos
+- **PostgreSQL/MySQL/H2**: Opciones de base de datos
+- **MapStruct**: Mapeo de entidades
+- **Lombok**: Reducción de código repetitivo
+- **JaCoCo**: Cobertura de código
 
-## Use Cases
+## Casos de Uso
 
-Perfect for:
-- **High-throughput APIs**: Non-blocking I/O for better performance
-- **Reactive systems**: Event-driven architectures
-- **Microservices**: Scalable service architectures
-- **Real-time applications**: Streaming data processing
+Perfecto para:
+- **APIs de alto rendimiento**: I/O no bloqueante para mejor desempeño
+- **Sistemas reactivos**: Arquitecturas orientadas a eventos
+- **Microservicios**: Arquitecturas de servicios escalables
+- **Aplicaciones en tiempo real**: Procesamiento de datos en streaming
 
-## Getting Started
+## Primeros Pasos
 
-1. Go to **Create** → **Choose a template** in Backstage
-2. Select **Spring WebFlux Microservice**
-3. Fill in the component details
-4. Configure Java and database settings
-5. Click **Create**
+1. Ve a **Crear** → **Elegir una plantilla** en Backstage
+2. Selecciona **Spring WebFlux Microservice**
+3. Completa los detalles del componente
+4. Configura Java y la base de datos
+5. Haz clic en **Crear**

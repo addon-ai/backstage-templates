@@ -2,10 +2,10 @@ site_name: 'Spring Boot Microservice'
 site_description: 'Create a new Spring Boot microservice with Hexagonal Architecture'
 
 nav:
-  - Overview: index.md
-  - Architecture: architecture.md
-  - Features: features.md
-  - Usage: usage.md
+  - Descripción General: index.md
+  - Arquitectura: architecture.md
+  - Características: features.md
+  - Guía de Uso: usage.md
 
 plugins:
   - techdocs-core

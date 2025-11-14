@@ -1,52 +1,52 @@
-# Features
+# Características
 
-## Generated Project Features
+## Características del Proyecto Generado
 
-### Core Framework
-- **Spring WebFlux**: Reactive web framework
-- **R2DBC**: Reactive database connectivity
-- **Spring Boot Actuator**: Health checks and metrics
-- **Spring Security**: Optional OAuth2 resource server
+### Framework Principal
+- **Spring WebFlux**: Framework web reactivo
+- **R2DBC**: Conectividad reactiva a base de datos
+- **Spring Boot Actuator**: Verificaciones de salud y métricas
+- **Spring Security**: Servidor de recursos OAuth2 opcional
 
-### Code Generation
-- **Complete CRUD**: Full create, read, update, delete operations
-- **DTOs**: Request/response objects with Bean Validation
-- **MapStruct**: Automatic entity-DTO mapping
-- **Repository Layer**: R2DBC reactive repositories
-- **REST Controllers**: WebFlux functional endpoints
+### Generación de Código
+- **CRUD Completo**: Operaciones completas de crear, leer, actualizar y eliminar
+- **DTOs**: Objetos de petición/respuesta con Bean Validation
+- **MapStruct**: Mapeo automático de entidad-DTO
+- **Capa de Repositorio**: Repositorios reactivos R2DBC
+- **Controladores REST**: Endpoints funcionales WebFlux
 
-### Documentation
-- **OpenAPI/Swagger**: Auto-generated API documentation
-- **TechDocs**: Comprehensive project documentation
-- **README**: Setup and usage instructions
+### Documentación
+- **OpenAPI/Swagger**: Documentación de API autogenerada
+- **TechDocs**: Documentación completa del proyecto
+- **README**: Instrucciones de configuración y uso
 
-### Testing
-- **Unit Tests**: 100% coverage for business logic
-- **Integration Tests**: WebTestClient for API testing
-- **Test Containers**: Database integration testing
-- **JaCoCo**: Code coverage reporting (85% threshold)
+### Pruebas
+- **Pruebas Unitarias**: 100% de cobertura para lógica de negocio
+- **Pruebas de Integración**: WebTestClient para pruebas de API
+- **Test Containers**: Pruebas de integración con base de datos
+- **JaCoCo**: Reporte de cobertura de código (umbral del 85%)
 
 ### DevOps
-- **GitHub Actions**: CI/CD pipeline
-- **Docker**: Multi-stage Dockerfile
-- **Docker Compose**: Local development environment
-- **Flyway**: Database migrations
+- **GitHub Actions**: Pipeline de CI/CD
+- **Docker**: Dockerfile multi-etapa
+- **Docker Compose**: Entorno de desarrollo local
+- **Flyway**: Migraciones de base de datos
 
-### Configuration Options
+### Opciones de Configuración
 
-#### Database Support
-- PostgreSQL (default)
+#### Soporte de Base de Datos
+- PostgreSQL (por defecto)
 - MySQL
-- H2 (for testing)
+- H2 (para pruebas)
 
-#### Optional Features
-- **Swagger/OpenAPI**: API documentation (default: enabled)
-- **Spring Actuator**: Health monitoring (default: enabled)  
-- **Spring Security**: OAuth2 security (default: disabled)
-- **Flyway**: Database migrations (default: enabled)
+#### Características Opcionales
+- **Swagger/OpenAPI**: Documentación de API (por defecto: habilitado)
+- **Spring Actuator**: Monitoreo de salud (por defecto: habilitado)  
+- **Spring Security**: Seguridad OAuth2 (por defecto: deshabilitado)
+- **Flyway**: Migraciones de base de datos (por defecto: habilitado)
 
-#### Environments
-- Local development
-- Testing
+#### Ambientes
+- Desarrollo local
+- Pruebas
 - Staging  
-- Production
+- Producción

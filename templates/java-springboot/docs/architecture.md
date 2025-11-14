@@ -1,32 +1,32 @@
-# Architecture
+# Arquitectura
 
-## Hexagonal Architecture (Ports and Adapters)
+## Arquitectura Hexagonal (Puertos y Adaptadores)
 
-This template generates projects following the **Hexagonal Architecture** pattern.
+Esta plantilla genera proyectos siguiendo el patrón de **Arquitectura Hexagonal**.
 
-### Generated Project Structure
+### Estructura del Proyecto Generado
 
 ```
 src/main/java/com/example/service/
-├── application/              # Application Layer
-│   ├── dto/                 # Data Transfer Objects
-│   ├── mapper/              # MapStruct mappers
-│   └── service/             # Use case implementations
-├── domain/                  # Domain Layer
-│   ├── model/               # Domain entities
-│   └── ports/               # Port interfaces
-│       ├── input/           # Input ports (use cases)
-│       └── output/          # Output ports (repositories)
-└── infrastructure/          # Infrastructure Layer
+├── application/              # Capa de Aplicación
+│   ├── dto/                 # Objetos de Transferencia de Datos
+│   ├── mapper/              # Mapeadores MapStruct
+│   └── service/             # Implementaciones de casos de uso
+├── domain/                  # Capa de Dominio
+│   ├── model/               # Entidades de dominio
+│   └── ports/               # Interfaces de puertos
+│       ├── input/           # Puertos de entrada (casos de uso)
+│       └── output/          # Puertos de salida (repositorios)
+└── infrastructure/          # Capa de Infraestructura
     ├── adapters/
-    │   ├── input/rest/      # REST controllers
-    │   └── output/persistence/ # JPA/Hibernate repositories
-    └── config/              # Configuration classes
+    │   ├── input/rest/      # Controladores REST
+    │   └── output/persistence/ # Repositorios JPA/Hibernate
+    └── config/              # Clases de configuración
 ```
 
-### Request Flow
+### Flujo de Peticiones
 
-The generated microservice follows this flow:
+El microservicio generado sigue este flujo:
 
 ```mermaid
 graph TD
@@ -44,10 +44,10 @@ graph TD
     B --> H[HTTP Response]
 ```
 
-### Key Benefits
+### Beneficios Clave
 
-- **Simple**: Easy to understand and maintain
-- **Reliable**: Proven patterns and practices
-- **Testable**: Clean separation of concerns
-- **Maintainable**: Clear architectural boundaries
-- **Flexible**: Easy to change external dependencies
+- **Simple**: Fácil de entender y mantener
+- **Confiable**: Patrones y prácticas probadas
+- **Testeable**: Separación clara de responsabilidades
+- **Mantenible**: Límites arquitectónicos claros
+- **Flexible**: Fácil cambiar dependencias externas

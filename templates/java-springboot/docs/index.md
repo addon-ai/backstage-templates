@@ -1,43 +1,43 @@
 # Spring Boot Microservice
 
-This template creates a **Spring Boot microservice** following **Hexagonal (Ports &amp; Adapters)** principles.
+Esta plantilla crea un **microservicio Spring Boot** siguiendo los principios de **Hexagonal (Ports &amp; Adapters)**.
 
-## What You Get
+## Qué Obtienes
 
-When you use this template, you'll generate a complete Spring Boot project with:
+Cuando usas esta plantilla, generas un proyecto completo de Spring Boot con:
 
-- **Spring Boot**: Traditional synchronous web framework
-- **JPA/Hibernate**: Traditional ORM for database access
-- **Hexagonal (Ports &amp; Adapters)**: Clean separation of concerns
-- **OpenAPI Documentation**: Auto-generated API docs with SpringDoc
-- **Health Monitoring**: Spring Boot Actuator endpoints
-- **Test Coverage**: JaCoCo with 85% threshold
-- **CI/CD**: GitHub Actions workflows
-- **Docker**: Multi-stage Dockerfile and docker-compose
+- **Spring Boot**: Framework web síncrono tradicional
+- **JPA/Hibernate**: ORM tradicional para acceso a datos
+- **Hexagonal (Ports &amp; Adapters)**: Separación clara de responsabilidades
+- **Documentación OpenAPI**: Documentación de API autogenerada con SpringDoc
+- **Monitoreo de Salud**: Endpoints de Spring Boot Actuator
+- **Cobertura de Pruebas**: JaCoCo con umbral del 85%
+- **CI/CD**: Flujos de trabajo de GitHub Actions
+- **Docker**: Dockerfile multi-etapa y docker-compose
 
-## Technology Stack
+## Stack Tecnológico
 
 - **Java**: 21
 - **Spring Boot**: 3.2.5
 - **Spring Boot**: Spring MVC
-- **JPA/Hibernate**: JPA/Hibernate ORM
-- **PostgreSQL/MySQL/H2**: Database options
-- **MapStruct**: Entity mapping
-- **Lombok**: Boilerplate reduction
-- **JaCoCo**: Code coverage
+- **JPA/Hibernate**: ORM JPA/Hibernate
+- **PostgreSQL/MySQL/H2**: Opciones de base de datos
+- **MapStruct**: Mapeo de entidades
+- **Lombok**: Reducción de código repetitivo
+- **JaCoCo**: Cobertura de código
 
-## Use Cases
+## Casos de Uso
 
-Perfect for:
-- **Traditional REST APIs**: Standard CRUD operations
-- **Microservices**: Service-oriented architectures
-- **Business applications**: Enterprise application development
-- **Data-driven applications**: Complex database operations
+Perfecto para:
+- **APIs REST tradicionales**: Operaciones CRUD estándar
+- **Microservicios**: Arquitecturas orientadas a servicios
+- **Aplicaciones empresariales**: Desarrollo de aplicaciones corporativas
+- **Aplicaciones orientadas a datos**: Operaciones complejas de base de datos
 
-## Getting Started
+## Primeros Pasos
 
-1. Go to **Create** → **Choose a template** in Backstage
-2. Select **Spring Boot Microservice**
-3. Fill in the component details
-4. Configure Java and database settings
-5. Click **Create**
+1. Ve a **Crear** → **Elegir una plantilla** en Backstage
+2. Selecciona **Spring Boot Microservice**
+3. Completa los detalles del componente
+4. Configura Java y la base de datos
+5. Haz clic en **Crear**
